@@ -30,6 +30,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  #HEroku database
+  gem 'pg', '~> 0.18.3'
+  # Used by Heroku to serve static assets such as images and stylesheets.
+  gem 'rails_12factor', '~> 0.0.3'
+end
+
 group :development, :test do
     # Use sqlite3 as the database for Active Record
     gem 'sqlite3'
@@ -37,10 +44,12 @@ group :development, :test do
     gem 'byebug'
 
     # Access an IRB console on exception pages or by using <%= console %> in views
-    gem 'web-console', '~> 2.0'
+    gem 'web-console', '~> 2.1'
     #debugging
     gem 'pry'
     # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
     gem 'spring'
 end
+
+
 
