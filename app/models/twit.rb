@@ -9,6 +9,5 @@ belongs_to :user
                                                 minimum: 2,
                                                 maximum: 140
 
-                                                },
-                    presence: true
+                                                }
 end
